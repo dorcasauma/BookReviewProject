@@ -134,5 +134,5 @@ class TestLoginViaBrowser():
             assert False, f"User was not registered hence login failed with {e.__class__}"
 
     def test_landing_page_redirects_to_registered_if_not_logged_in(self, page, run_server_fixture, server_url):
-        page.goto(server_url)
-        pass
+        page.goto(f"http:/localhost:{server_port}")
+        assert page.title() == "Bookreview"

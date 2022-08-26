@@ -1,5 +1,6 @@
 import sys
-from turtle import pd 
+from turtle import pd
+from server import server 
 from users import register, login,verifyDateofBirth2
 command_line_inputs = sys.argv
 print(command_line_inputs)
@@ -14,6 +15,9 @@ if command_line_inputs[1] == 'user_register':
     password2 = credentials[2]
     dateOfBirth = credentials[3]
     print(register(username,password,password2,dateOfBirth))
+elif command_line_inputs[1] == "run_server":
+    pass
+    
 else:
     username = credentials[0]
     password = credentials[1]
